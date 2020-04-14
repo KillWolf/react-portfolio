@@ -1,0 +1,56 @@
+.main__content__container {
+    width: 100%;
+    height: 400px;
+    margin-top: 115px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #F5F5F5;
+}
+
+.main__content__container div:last-child {
+    height: inherit;
+    width: 500px;
+    background-position: 70% 70%;
+    background-size: cover;
+}
+
+
+.main__content__container div:last-child div {
+    height: inherit;
+    width: 500px;
+    background-position: 70% 70%;
+    background-size: cover;
+}
+
+
+.main__content__container__gridWrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-areas: 
+    "sidebar title title title"
+    "sidebar content content ."
+    "sidebar . . .";
+}
+
+.main__content__container__gridWrapper__title {
+    grid-area: title;
+}
+
+.main__content__container__gridWrapper__sidebar {
+    grid-area: sidebar;
+}
+
+.main__content__container__gridWrapper__content {
+    grid-area: content;
+    text-align: right;
+}
+
+.main__content__container__gridWrapper h1 {
+    text-align: left;
+    align-self: center;
+}
+
+.main__content__container__gridWrapper h1 {
+    text-align: left;
+    align-self: center;
+}
