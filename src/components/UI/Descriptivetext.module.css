@@ -1,0 +1,16 @@
+.DescriptiveText {
+    color: rgb(240, 240, 240);
+    font-weight: 700;
+    font-size: 4rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.textAlign__left {
+    left: 10px;
+}
+
+
+.textAlign__right {
+    right: -20px;
+}

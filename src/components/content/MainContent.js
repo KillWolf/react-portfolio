@@ -1,22 +1,45 @@
 import React from 'react';
 import hero from '../../assets/images/jacob.jpg';
+import DescriptiveText from '../UI/DescriptiveText'
 import classes from './MainContent.module.css';
+import { findByLabelText } from '@testing-library/react';
 
-const mainContent = () => {
+const mainContent = (props) => {
     return (
         <div className={classes.main__content__container}>
-            <div></div>
-            <div className={classes.main__content__container__gridWrapper}>
-                <h1 className={classes.main__content__container__gridWrapper__title}>HELLO, VISITOR</h1>
-                <p className={classes.main__content__container__gridWrapper__content}>
-                    Hi! I am a front-end webdeveloper who also dvelves into illustrations and other whatnots.
-                </p>
+            <div className={classes.FirstFlexChild}>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+               
+                <DescriptiveText alignment='left'>INTRODUCTION</DescriptiveText>
             </div>
-            <div>
+            <div className={classes.SecondFlexChild}>
                 <div style={{ backgroundImage: `url(${hero})` }} className={classes.main__content__image} alt="Jacob with bass" ></div>
             </div>
         </div>
     )
 }
-// width="600" height="352"
+
+
+
+
+{/* 
+<form onSubmit={props.onSubmit}>
+<h1>
+    HELLO, <input className={classes.main__content__input} onChange={props.change} value={props.name.toUpperCase()}></input>
+    {/* <div className={classes.main__content__input__nameChangeContainer}>
+        {props.nameChanged ? <div className={classes.main__content__input__nameChange}>Name changed to {props.name}. Welcome!</div> : <div></div>}
+    </div> }
+</h1>
+</form>
+<p className={classes.MainText}>
+    I'm <i>Jacob</i>, a frontend developer, with a keen interest in 
+    <span className={classes.TextDecoration__Purple}>music</span> and 
+<span className={classes.TextDecoration__Orange}>illustrations</span> aswell.</p> */}
+
 export default mainContent;

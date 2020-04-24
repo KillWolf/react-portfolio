@@ -1,9 +1,10 @@
 .main__illustration {
     width: 100%;
+    margin-top: 2rem;
     height: 400px;
     display: flex;
+    position: relative;
     justify-content: space-between;
-    background-color: #FFF3E0;
 }
 
 .main__illustration div {

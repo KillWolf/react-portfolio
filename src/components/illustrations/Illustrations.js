@@ -1,4 +1,5 @@
 import React from 'react';
+import DescriptiveText from '../UI/DescriptiveText'
 import classes from './Illustrations.module.css';
 import fedteminister from '../../assets/images/fedteminister.jpg'
 
@@ -9,6 +10,8 @@ const illustrations = () => {
             <div>fun</div>
             <div>fun</div>
             <div>fun</div>
+            <DescriptiveText alignment='right'>ILLUSTRATIONS</DescriptiveText>
+
 
         </div>
     )
