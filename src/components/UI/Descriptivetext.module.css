@@ -1,13 +1,20 @@
 .DescriptiveText {
-    color: rgb(240, 240, 240);
+    color: rgba(240, 240, 240, 1);
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 3rem;
     position: absolute;
     bottom: 0;
+    display: none;
+}
+
+@media (min-width: 767px) {
+    .DescriptiveText {
+        display: block;
+    }
 }
 
 .textAlign__left {
-    left: 10px;
+    left: -10px;
 }
 
 

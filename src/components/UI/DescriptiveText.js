@@ -9,7 +9,7 @@ const descriptivetext = (props) => {
     }
 
     return (
-        <h1 className={[classes.DescriptiveText, alignment()].join(' ')}>{props.children}</h1>
+        <div className={[classes.DescriptiveText, alignment()].join(' ')}>{props.children}</div>
     )
 };
 
