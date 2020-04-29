@@ -1,41 +1,62 @@
-.main__content__container {
-    width: 100%;
-    height: 400px;
-    margin-top: 115px;
-    display: flex;
-    justify-content: space-between;
-    flex-flow: column;
+.main__content__grid__container {
     position: relative;
-    z-index: 10
-
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas: '. . . . . .' '. text text text text .' '. . . . . .'
 }
 
-.main__content__container .FirstFlexChild{
+
+.MainImage {
+    grid-area: image;
+    max-width: 100%;
+    height: auto;
+    align-self: center;
+    display: none;
+    z-index: 10;
+    animation: movein 3s;
+    animation-timing-function: ease;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.MainText {
+    grid-area: text;
+}
+
+.BodyText {
+    grid-area: text;
+    line-height: 3rem;
+}
+
+.MainHeader {
     display: flex;
-    flex-flow: column;
-    margin-left: 2rem;
-    align-items: center;
-    min-width: 520px;
+    max-height: 51px;
 }
 
-
-.main__content__container .SecondFlexChild{
-    display: flex;
-    flex-flow: column;
-    margin-left: 2rem;
-    align-items: center;
-    width: 100%;
-    min-height: 400px;
+.MainHeader input {
+    margin-left: 1rem;
 }
 
-@media (min-width: 900px) {
-    .main__content__container {
-        flex-flow: row;
+@media (min-width: 767px) {
+    .main__content__grid__container {
+        grid-template-columns: 0.2fr 2fr 2fr 0.2fr 2fr 2fr;
+        grid-template-rows: 1fr 3fr 1fr;
+        grid-template-areas: '. . . . . .' '. text text . image image' '. . . . image image';
     }
+    .MainImage {
+        display: block;
+    }
+}
 
-    .SecondFlexChild {
-
-        min-height: 100%
+@media (min-width: 500px) and (max-width: 766px) {
+    .main__content__grid__container {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.1fr 0.5fr 0.1fr 1fr 0.1fr;
+        grid-template-areas: '. . . . . .' '. text text text text .' '. . . . . .' 'image image image image image image' '. . . . . .';
+    }
+    .MainImage {
+        display: block;
     }
 }
 
@@ -43,30 +64,31 @@
     width: 60%;
     min-width: 60%;
     line-height: 3rem;
-
 }
 
-.main__content__container .TextDecoration__Purple {
+.TextDecoration__Purple {
     color: #673AB7;
     font-size: 2rem;
     font-weight: 100;
     padding-bottom: 10px;
     position: relative;
     bottom: 1rem;
-    
+    margin: 0 1rem;
 }
 
-.main__content__container .TextDecoration__Orange {
+.TextDecoration__Orange {
     color: #FF9800;
     font-size: 2rem;
     font-weight: 100;
     padding-bottom: 10px;
     position: relative;
     top: 1rem;
+    margin: 0 1rem;
+
 }
 
 form {
-    text-align: center;
+    text-align: left;
     width: 100%;
 }
 
@@ -75,13 +97,12 @@ form {
     font-weight: 100;
     margin-bottom: 10px;
     font-weight: 700;
-    border:none;
-    background-image:none;
-    background-color:transparent;
+    border: none;
+    background-image: none;
+    background-color: transparent;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    
 }
 
 .main__content__input__nameChange {
@@ -98,21 +119,11 @@ form {
     outline: none;
 }
 
-
-.main__content__image {
-    height: 100%;
-    width: 630px;
-    background-position: 70% 70%;
-    background-size: cover;
-    text-align: right;
-    color: #FF9800;
-    animation: movein 2s;
-    animation-timing-function: ease;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-}
-
 @keyframes movein {
-    from {margin-right: -700px; }
-    to {margin-right: 0;}
+    from {
+        margin-left: 400px;
+    }
+    to {
+        margin-left: 0;
+    }
 }

@@ -17,12 +17,12 @@ function App() {
   }
 
   function onSubmit(e) {
+    e.preventDefault();
     setNameChanged(true);
     setTimeout(() => {
       setNameChanged(false);
     }, 2000)
     localStorage.setItem('name', name);
-    e.preventDefault();
   }
 
   return (

@@ -1,14 +1,14 @@
-.main__illustration {
+.MainIllustration {
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 10rem;
     height: 400px;
     display: flex;
     position: relative;
     justify-content: space-between;
 }
 
-.main__illustration div {
+.MainIllustration .image {
     height: inherit;
-    width: 500px;
+    width: 300px;
     background-size: cover;
 }

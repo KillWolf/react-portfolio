@@ -5,12 +5,13 @@ import fedteminister from '../../assets/images/fedteminister.jpg'
 
 const illustrations = () => {
     return (
-        <div className={classes.main__illustration}>
-            <div style={{ backgroundImage:`url(${fedteminister})`}}></div>
+        <div className={classes.MainIllustration}>
+            <div className={classes.image} style={{ backgroundImage:`url(${fedteminister})`}}></div>
             <div>fun</div>
             <div>fun</div>
             <div>fun</div>
-            <DescriptiveText alignment='right'>ILLUSTRATIONS</DescriptiveText>
+            <div>See more</div>
+            <DescriptiveText >ILLUSTRATIONS</DescriptiveText>
 
 
         </div>
