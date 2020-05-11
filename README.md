@@ -3,10 +3,13 @@ As an ongoing learning process, I am creating my portfolio in React. I try to im
 Please enjoy responsibly. 
 
 
-
+######################
 
 
 Standard boilter text below.
+
+
+######################
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
