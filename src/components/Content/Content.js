@@ -1,9 +1,9 @@
 import React from 'react';
 import hero from '../../assets/images/jacob.jpg';
-import DescriptiveText from '../UI/DescriptiveText'
-import classes from './MainContent.module.css';
+import DescriptiveText from '../UI/DescriptiveText/DescriptiveText'
+import classes from './Content.module.css';
 
-const mainContent = (props) => {
+const content = (props) => {
     return (
         <div className={classes.main__content__grid__container}>
             <div className={classes.MainText}>
@@ -18,7 +18,7 @@ const mainContent = (props) => {
                 <p className={classes.BodyText}>
                     I'm <i>Jacob</i>, a frontend developer, with a keen interest in<span className={classes.TextDecoration__Purple}>music</span> and<span className={classes.TextDecoration__Orange}>illustrations.</span></p>
             </div>
-            <img src={hero} className={classes.MainImage} />
+            <img src={hero} alt="Jacob in awesome pose" className={classes.MainImage} />
             <DescriptiveText alignment="left">INTRODUCTION</DescriptiveText>
         </div>
     )
@@ -27,4 +27,4 @@ const mainContent = (props) => {
 
 
 
-export default mainContent;
+export default content;

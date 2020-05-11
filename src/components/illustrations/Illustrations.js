@@ -1,8 +1,10 @@
 import React from 'react';
-import DescriptiveText from '../UI/DescriptiveText'
+import DescriptiveText from '../UI/DescriptiveText/DescriptiveText'
 import classes from './Illustrations.module.css';
 import fedteminister from '../../assets/images/fedteminister.jpg'
 
+
+// RETHINK CONTAINERS AND STYLES, DESCRIPTIVE TEXT BREAKS LAYOUT
 const illustrations = () => {
     return (
         <div className={classes.MainIllustration}>

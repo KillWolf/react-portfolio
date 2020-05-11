@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Aux from '../hoc/Aux/Aux';
 import './App.css';
-import Header from '../components/header/Header'
-import MainContent from '../components/content/MainContent'
-import Illustrations from '../components/illustrations/Illustrations'
+import Header from '../components/Header/Header'
+import Content from '../components/Content/Content'
+import Illustrations from '../components/Illustrations/Illustrations'
 import Navigation from '../components/Navigation/Navigation'
+import Project from '../components/Projects/Project';
 
 
 function App() {
@@ -12,16 +15,10 @@ function App() {
 
   const [name, setName] = useState(storedName ? storedName : 'Visitor');
   const [nameChanged, setNameChanged] = useState(false);
-  const [toggleMenuState, setToggleMenuState] = useState(false)
 
 
   function setVisitorNameHandler(e) {
     setName(e.target.value);
-  }
-
-  function updateToggleMenuState() {
-    let newState = !toggleMenuState;
-    setToggleMenuState(newState);
   }
 
   function onSubmit(e) {
@@ -34,12 +31,17 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Header />
-      <Navigation currentState={toggleMenuState} toggleMenuState={updateToggleMenuState}/>
-      <MainContent name={name} nameChanged={nameChanged} onSubmit={onSubmit} change={setVisitorNameHandler}/>
-      <Illustrations />
-    </div>
+    <Aux>
+      <BrowserRouter>
+        <div className="App">
+          <Header />
+          <Navigation />
+          <Content name={name} nameChanged={nameChanged} onSubmit={onSubmit} change={setVisitorNameHandler} />
+          <Project />
+          {/*<Illustrations /> ADD LATER WHEN LAYOUT IS FIXED */}
+        </div>
+      </BrowserRouter>
+    </Aux>
   );
 }
 

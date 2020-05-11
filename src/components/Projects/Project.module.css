@@ -1,0 +1,28 @@
+.Project {
+    padding: 0 2rem;
+    margin-top: 10rem;
+    height: 400px;
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.Project .ProjectNav {
+    position: absolute;
+    top: -3rem;
+    left: 3rem;
+    font-size: 0.875rem;
+    color: #757575;
+}
+
+.Project .Links {
+    cursor: pointer;
+}
+
+.Project .Links:hover {
+    border-bottom: 1px solid black;
+}
+
+.Project .Active {
+    font-weight: 700;
+}
