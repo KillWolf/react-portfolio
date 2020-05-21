@@ -8,6 +8,12 @@
     right: 2rem;
     transition: all .3s ease-in-out;
     z-index: 100;
+    cursor: pointer;
+}
+
+.SmallDot:hover {
+    background-color: #03DAC5;
+    transform: scale(1.2)
 }
 
 .BigDot {
@@ -33,23 +39,7 @@
     justify-content: center;
     align-items: center;
     font-size: 2rem;
+    cursor: pointer;
     transition: opacity .3s;
 }
 
-
-.MenuListShown {
-    opacity: 1 !important; 
-    transition: all .6s;
-}
-.MenuList {
-    opacity: 0;
-    color: black;
-    display: flex;
-    position: absolute;
-    z-index: 200;
-    transition: all .6s;
-}
-
-.MenuList ul {
-    list-style-type: none;
-}

@@ -1,0 +1,35 @@
+.MenuListShown {
+    opacity: 1 !important; 
+    transition: all .6s;
+}
+.MenuList {
+    opacity: 0;
+    color: black;
+    display: flex;
+    position: absolute;
+    left: 3rem;
+    top: 3rem;
+    z-index: 200;
+    transition: all .3s;
+    font-size: 2rem;
+    color: white;
+}
+
+.MenuList ul {
+    list-style-type: none;
+}
+
+.MenuList a {
+    color: white;
+    text-decoration: none;
+    transition: all .2s;
+}
+
+.MenuList a:hover {
+    color: #03DAC5;
+    font-size: 2.2rem;
+}
+
+.nav__container__image {
+    padding: 0 1rem;
+}

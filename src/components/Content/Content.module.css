@@ -105,16 +105,6 @@ form {
     box-shadow: none;
 }
 
-.main__content__input__nameChange {
-    font-size: 15px;
-    color: #2E7D32;
-    text-transform: uppercase;
-}
-
-.main__content__input__nameChangeContainer {
-    min-height: 40px;
-}
-
 .main__content__input:focus {
     outline: none;
 }
